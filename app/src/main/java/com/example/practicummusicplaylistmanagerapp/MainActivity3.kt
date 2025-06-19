@@ -44,6 +44,12 @@ class MainActivity3 : AppCompatActivity() {
             }
         }
 
+        returnBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+
+            startActivity(intent)
+        }
+
         // When the Average button is clicked
         averageBtn.setOnClickListener {
             // If there are no saved ratings yet
@@ -67,13 +73,8 @@ class MainActivity3 : AppCompatActivity() {
                 displayTextview.text = ""
             }
 
-            returnBtn.setOnClickListener {
-                val intent = Intent(this, MainActivity::class.java)
-
-                startActivity(intent)
-            }
             }
         }
     }
-}
+
 
