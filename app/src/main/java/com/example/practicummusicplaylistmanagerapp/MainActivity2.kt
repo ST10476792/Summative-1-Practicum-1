@@ -27,32 +27,39 @@ class MainActivity2 : AppCompatActivity() {
 
 
         saveBtn.setOnClickListener {
+            // Gets information from user and convert to strings
             val title = titleEdittext.text.toString()
             val artist = nameEditText.text.toString()
-            val rating = ratingEditText.text.toString().toIntOrNull() ?: 0
             val comment = commentsEditText.text.toString()
+            // Convert rating to an integer
+            val rating = ratingEditText.text.toString().toIntOrNull() ?: 0
 
 
-                if (title.isNotEmpty() && artist.isNotEmpty() && rating in 1..5 && count < 10) {
+            //Check if all fields are filled correctly and if there's space to add another entry
+            if (title.isNotEmpty() && artist.isNotEmpty() && rating in 1..5 && count < 10) {
                     songTitles[count] = title
                     artistNames[count] = artist
                     ratings[count] = rating
                     comments[count] = comment
-                    count++
+                // Increase count to move to the next index
+                        count++
 
-                    Toast.makeText(this, "Saved!", Toast.LENGTH_SHORT).show()
+                // Show success message
+                Toast.makeText(this, "Saved!", Toast.LENGTH_SHORT).show()
 
-                    titleEdittext.text.clear()
+                //Clear input fields after saving
+                titleEdittext.text.clear()
                     nameEditText.text.clear()
                     ratingEditText.text.clear()
                     commentsEditText.text.clear()
                 } else {
+                    //shows this message if not all information is filled
                     Toast.makeText(this, "Fill all fields correctly", Toast.LENGTH_SHORT).show()
                 }
             }
 
             backBtn1.setOnClickListener {
-                finish() // go back to MainActivity
+                finish() // ends the activity
             }
         }
     }
