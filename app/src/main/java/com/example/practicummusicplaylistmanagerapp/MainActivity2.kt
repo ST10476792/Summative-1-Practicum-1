@@ -17,7 +17,6 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
         val saveBtn = findViewById<Button>(R.id.saveBtn)
-        val resetBtn = findViewById<Button>(R.id.resetBtn)
         val titleEdittext = findViewById<EditText>(R.id.titleEdittext)
         val nameEditText = findViewById<EditText>(R.id.nameEdittext)
         val ratingEditText = findViewById<EditText>(R.id.ratingEdittext)
@@ -48,14 +47,14 @@ class MainActivity2 : AppCompatActivity() {
 
                 //Clear input fields after saving
                 titleEdittext.text.clear()
-                    nameEditText.text.clear()
-                    ratingEditText.text.clear()
-                    commentsEditText.text.clear()
-                } else {
-                    //shows this message if not all information is filled
-                    Toast.makeText(this, "Fill all fields correctly", Toast.LENGTH_SHORT).show()
-                }
+                nameEditText.text.clear()
+                ratingEditText.text.clear()
+                commentsEditText.text.clear()
+            } else {
+                //shows this message if not all information is filled
+                Toast.makeText(this, "Fill all fields correctly", Toast.LENGTH_SHORT).show()
             }
+        }
 
             backBtn1.setOnClickListener {
                 finish() // ends the activity

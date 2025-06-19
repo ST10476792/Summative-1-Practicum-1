@@ -23,41 +23,55 @@
 
     <Button
         android:id="@+id/averageBtn"
-        android:layout_width="116dp"
-        android:layout_height="116dp"
+        android:layout_width="113dp"
+        android:layout_height="96dp"
         android:backgroundTint="#bfbb82"
         android:text="AVERAGE RATING"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973" />
+        app:layout_constraintVertical_bias="0.861" />
 
     <Button
         android:id="@+id/returnBtn"
-        android:layout_width="124dp"
-        android:layout_height="124dp"
+        android:layout_width="112dp"
+        android:layout_height="94dp"
         android:backgroundTint="#bf5a5a"
         android:text="RETURN"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.887" />
+        app:layout_constraintVertical_bias="0.859" />
 
     <Button
         android:id="@+id/displayBtn"
-        android:layout_width="124dp"
-        android:layout_height="124dp"
+        android:layout_width="118dp"
+        android:layout_height="105dp"
         android:backgroundTint="#30302a"
+        android:textSize="17sp"
         android:text="DISPLAY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.887" />
+        app:layout_constraintVertical_bias="0.859" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="274dp"
+        android:layout_height="55dp"
+        android:text="CLEAR"
+        android:backgroundTint="#6a9c73"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 </androidx.constraintlayout.widget.ConstraintLayout>

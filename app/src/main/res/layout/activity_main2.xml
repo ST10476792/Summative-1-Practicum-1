@@ -9,21 +9,6 @@
     tools:context=".MainActivity2">
 
     <Button
-        android:id="@+id/resetBtn"
-        android:layout_width="127dp"
-        android:layout_height="129dp"
-        android:backgroundTint="#a18b68"
-        android:text="RESET"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
-
-    <Button
         android:id="@+id/saveBtn"
         android:layout_width="139dp"
         android:layout_height="142dp"
@@ -33,10 +18,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintVertical_bias="0.847" />
 
     <TextView
         android:id="@+id/headingTextview2"
@@ -55,18 +40,18 @@
 
     <Button
         android:id="@+id/backBtn1"
-        android:layout_width="114dp"
-        android:layout_height="116dp"
+        android:layout_width="142dp"
+        android:layout_height="152dp"
         android:backgroundTint="#a18b68"
         android:text="GO BACK"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
+        app:layout_constraintVertical_bias="0.861" />
 
     <EditText
         android:id="@+id/titleEdittext"

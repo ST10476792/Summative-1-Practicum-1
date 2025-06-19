@@ -14,7 +14,7 @@ class MainActivity3 : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main3)
 
-        val returnBtn = findViewById<Button>(R.id.returnBtn)
+        val clearBtn = findViewById<Button>(R.id.clearBtn)
         val displayTextview = findViewById<TextView>(R.id.displayTextview)
         val displayBtn = findViewById<Button>(R.id.displayBtn)
         val averageBtn = findViewById<Button>(R.id.averageBtn)
@@ -53,9 +53,10 @@ class MainActivity3 : AppCompatActivity() {
             displayTextview.text = "Average Rating: $average"
         }
 
-        returnBtn.setOnClickListener {
-            finish()
+        clearBtn.setOnClickListener {
+            displayTextview.text = ""
         }
+
     }
 }
 
