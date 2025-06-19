@@ -10,14 +10,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    companion object{
-        val songTitles = Array(10) { "" }
-        val artistNames = Array(10) { "" }
-        val ratings = Array(10) { 0 }
-        val comments = Array(10) { "" }
-        var count = 0
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,18 +20,21 @@ class MainActivity : AppCompatActivity() {
         val exitBtn = findViewById<Button>(R.id.exitBtn)
         val headingTextView = findViewById<TextView>(R.id.headingTextview)
 
+        //pressing next button will take you to the third screen
         nextBtn.setOnClickListener {
             val intent = Intent(this, MainActivity3::class.java)
 
             startActivity(intent)
         }
 
+        //pressing the add button will take you to the second screen
         addBtn.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
 
             startActivity(intent)
         }
 
+        //pressing the exit button will exit the app
         exitBtn.setOnClickListener {
             finishAffinity()
         }
