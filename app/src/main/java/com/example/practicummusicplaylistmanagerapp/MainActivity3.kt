@@ -45,9 +45,7 @@ class MainActivity3 : AppCompatActivity() {
         }
 
         returnBtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-
-            startActivity(intent)
+            finish()  // Closes this activity and returns to the previous one
         }
 
         // When the Average button is clicked
