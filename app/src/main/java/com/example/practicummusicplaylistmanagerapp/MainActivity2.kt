@@ -44,7 +44,7 @@ class MainActivity2 : AppCompatActivity() {
                 // Increase count to move to the next index
                         count++
 
-                // Show success message
+                // Shows this message if saved successfully
                 Toast.makeText(this, "Saved!", Toast.LENGTH_SHORT).show()
 
                 //Clear input fields after saving
