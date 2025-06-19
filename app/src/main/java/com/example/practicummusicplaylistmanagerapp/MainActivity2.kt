@@ -36,13 +36,12 @@ class MainActivity2 : AppCompatActivity() {
 
 
             //Check if all fields are filled correctly and if there's space to add another entry
-            if (title.isNotEmpty() && artist.isNotEmpty() && rating in 1..5 && count < 10) {
-                    songTitles[count] = title
-                    artistNames[count] = artist
-                    ratings[count] = rating
-                    comments[count] = comment
-                // Increase count to move to the next index
-                        count++
+            if (title.isNotEmpty() && artist.isNotEmpty() && rating in 1..5 && PlaylistData.count < 10) {
+                PlaylistData.songTitles[PlaylistData.count] = title
+                PlaylistData.artistNames[PlaylistData.count] = artist
+                PlaylistData.ratings[PlaylistData.count] = rating
+                PlaylistData.comments[PlaylistData.count] = comment
+                PlaylistData.count++
 
                 // Shows this message if saved successfully
                 Toast.makeText(this, "Saved!", Toast.LENGTH_SHORT).show()

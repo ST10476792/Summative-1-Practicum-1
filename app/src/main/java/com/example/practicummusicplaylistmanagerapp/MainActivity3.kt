@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity3 :  AppCompatActivity() {
+class MainActivity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -24,12 +24,12 @@ class MainActivity3 :  AppCompatActivity() {
             var result = ""
 
             // Loop through all saved songs
-            for (i in 0 until count) {
-                result = result + "Song: " + songTitles[i] + "\n"
-                result = result + "Artist: " + artistNames[i] + "\n"
-                result = result + "Rating: " + ratings[i] + "out of 5\n"
-                result = result + "Comment: " + comments[i] + "\n"
-                result = result + "-------------------\n"
+            for (i in 0 until PlaylistData.count) {
+                result += "Song: ${PlaylistData.songTitles[i]}\n"
+                result += "Artist: ${PlaylistData.artistNames[i]}\n"
+                result += "Rating: ${PlaylistData.ratings[i]} out of 5\n"
+                result += "Comment: ${PlaylistData.comments[i]}\n"
+                result += "-------------------\n"
             }
 
             // If no songs were saved, show a message
@@ -41,22 +41,16 @@ class MainActivity3 :  AppCompatActivity() {
             }
         }
 
-        averageBtn.setOnClickListener {
-            if (count == 0) {
-                //when average button is clicked,if no songs saved yet then will show this message
-                displayTextview.text = "No ratings yet."
-            } else {
-                var total = 0  // A variable to store the sum of ratings
 
-                // Loop through ratings to get total
-                for (i in 0 until count) {
-                    total = total + ratings[i]
-                }
-
-                // Calculate average rating
-                val average = total / count
-                displayTextview.text = "Average Rating: $average"
+        if (PlaylistData.count == 0) {
+            displayTextview.text = "No ratings yet."
+        } else {
+            var total = 0
+            for (i in 0 until PlaylistData.count) {
+                total += PlaylistData.ratings[i]
             }
+            val average = total / PlaylistData.count
+            displayTextview.text = "Average Rating: $average"
         }
 
         returnBtn.setOnClickListener {
