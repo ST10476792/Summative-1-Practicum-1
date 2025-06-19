@@ -1,5 +1,6 @@
 package com.example.practicummusicplaylistmanagerapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -15,6 +16,7 @@ class MainActivity3 : AppCompatActivity() {
         setContentView(R.layout.activity_main3)
 
         // Find views by ID
+        val returnBtn = findViewById<Button>(R.id.returnBtn)
         val clearBtn = findViewById<Button>(R.id.clearBtn)
         val displayTextview = findViewById<TextView>(R.id.displayTextview)
         val displayBtn = findViewById<Button>(R.id.displayBtn)
@@ -63,6 +65,13 @@ class MainActivity3 : AppCompatActivity() {
             }
             clearBtn.setOnClickListener {
                 displayTextview.text = ""
+            }
+
+            returnBtn.setOnClickListener {
+                val intent = Intent(this, MainActivity::class.java)
+
+                startActivity(intent)
+            }
             }
         }
     }
